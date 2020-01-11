@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/music_ogg.c \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_loadso.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_stdinc.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_config.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_platform.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/begin_code.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/close_code.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_config_iphoneos.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_error.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/music_ogg.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/music.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/SDL_mixer.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_rwops.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_audio.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_endian.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_mutex.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_thread.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_atomic.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include/SDL_version.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/external/libvorbisidec-1.2.1/ivorbisfile.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/external/libvorbisidec-1.2.1/ivorbiscodec.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/external/libogg-1.3.2/include/ogg/ogg.h \
+  /Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer/external/libogg-1.3.2/include/ogg/os_types.h
