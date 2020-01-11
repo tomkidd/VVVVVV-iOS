@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5F6D2BA9-1CDA-4DA9-893B-A15026E2E348"
+            uuid = "AD6E323F-06EC-4A71-8DBD-959D7EC35346"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VVVVVV/src/FileSystemUtils.cpp"
+            filePath = "VVVVVV/src/SoundSystem.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "FILESYSTEM_init(argvZero)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "MusicTrack::MusicTrack(rw)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14F98E05-96DC-4FA6-86A9-30F3C7D905C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDL_mixer/src/music.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "587"
+            endingLineNumber = "587"
+            landmarkName = "Mix_LoadMUSType_RW(src, type, freesrc)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
