@@ -242,7 +242,6 @@
 		52ED1DFF222889500061FCE0 /* SDL_error.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99B9D50DD52EDC00FB1D6B /* SDL_error.c */; };
 		52ED1E00222889500061FCE0 /* SDL.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99B9D80DD52EDC00FB1D6B /* SDL.c */; };
 		52ED1E01222889500061FCE0 /* SDL_syscond.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA070DD52EDC00FB1D6B /* SDL_syscond.c */; };
-		52ED1E02222889500061FCE0 /* SDL_render_metal.m in Sources */ = {isa = PBXBuildFile; fileRef = AADC5A621FDA10C800960936 /* SDL_render_metal.m */; };
 		52ED1E03222889500061FCE0 /* SDL_sysmutex.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA080DD52EDC00FB1D6B /* SDL_sysmutex.c */; };
 		52ED1E04222889500061FCE0 /* SDL_syssem.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA0A0DD52EDC00FB1D6B /* SDL_syssem.c */; };
 		52ED1E05222889500061FCE0 /* SDL_systhread.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA0B0DD52EDC00FB1D6B /* SDL_systhread.c */; };
@@ -442,8 +441,6 @@
 		AADC5A5F1FDA105600960936 /* SDL_vulkan_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D75171E1EE1D98200820EEA /* SDL_vulkan_utils.c */; };
 		AADC5A601FDA10A400960936 /* SDL_uikitvulkan.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7516FA1EE1C28A00820EEA /* SDL_uikitvulkan.m */; };
 		AADC5A631FDA10C800960936 /* SDL_shaders_metal_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = AADC5A611FDA10C800960936 /* SDL_shaders_metal_ios.h */; };
-		AADC5A641FDA10C800960936 /* SDL_render_metal.m in Sources */ = {isa = PBXBuildFile; fileRef = AADC5A621FDA10C800960936 /* SDL_render_metal.m */; };
-		AADC5A651FDA10CB00960936 /* SDL_render_metal.m in Sources */ = {isa = PBXBuildFile; fileRef = AADC5A621FDA10C800960936 /* SDL_render_metal.m */; };
 		F30D9C99212CD0360047DF2E /* SDL_sensor.h in Headers */ = {isa = PBXBuildFile; fileRef = F30D9C98212CD0360047DF2E /* SDL_sensor.h */; };
 		F30D9C9E212CD0990047DF2E /* SDL_sensor_c.h in Headers */ = {isa = PBXBuildFile; fileRef = F30D9C9B212CD0980047DF2E /* SDL_sensor_c.h */; };
 		F30D9C9F212CD0990047DF2E /* SDL_syssensor.h in Headers */ = {isa = PBXBuildFile; fileRef = F30D9C9C212CD0990047DF2E /* SDL_syssensor.h */; };
@@ -617,7 +614,6 @@
 		F3E3C6ED2241389A007D243C /* SDL_error.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99B9D50DD52EDC00FB1D6B /* SDL_error.c */; };
 		F3E3C6EE2241389A007D243C /* SDL.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99B9D80DD52EDC00FB1D6B /* SDL.c */; };
 		F3E3C6EF2241389A007D243C /* SDL_syscond.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA070DD52EDC00FB1D6B /* SDL_syscond.c */; };
-		F3E3C6F02241389A007D243C /* SDL_render_metal.m in Sources */ = {isa = PBXBuildFile; fileRef = AADC5A621FDA10C800960936 /* SDL_render_metal.m */; };
 		F3E3C6F12241389A007D243C /* SDL_sysmutex.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA080DD52EDC00FB1D6B /* SDL_sysmutex.c */; };
 		F3E3C6F22241389A007D243C /* SDL_syssem.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA0A0DD52EDC00FB1D6B /* SDL_syssem.c */; };
 		F3E3C6F32241389A007D243C /* SDL_systhread.c in Sources */ = {isa = PBXBuildFile; fileRef = FD99BA0B0DD52EDC00FB1D6B /* SDL_systhread.c */; };
@@ -2475,7 +2471,6 @@
 				52ED1DFF222889500061FCE0 /* SDL_error.c in Sources */,
 				52ED1E00222889500061FCE0 /* SDL.c in Sources */,
 				52ED1E01222889500061FCE0 /* SDL_syscond.c in Sources */,
-				52ED1E02222889500061FCE0 /* SDL_render_metal.m in Sources */,
 				52ED1E03222889500061FCE0 /* SDL_sysmutex.c in Sources */,
 				52ED1E04222889500061FCE0 /* SDL_syssem.c in Sources */,
 				52ED1E05222889500061FCE0 /* SDL_systhread.c in Sources */,
@@ -2603,7 +2598,6 @@
 				F3E3C6ED2241389A007D243C /* SDL_error.c in Sources */,
 				F3E3C6EE2241389A007D243C /* SDL.c in Sources */,
 				F3E3C6EF2241389A007D243C /* SDL_syscond.c in Sources */,
-				F3E3C6F02241389A007D243C /* SDL_render_metal.m in Sources */,
 				F3E3C6F12241389A007D243C /* SDL_sysmutex.c in Sources */,
 				F3E3C6F22241389A007D243C /* SDL_syssem.c in Sources */,
 				F3E3C6F32241389A007D243C /* SDL_systhread.c in Sources */,
@@ -2743,7 +2737,6 @@
 				FAB598501BB5C31600BE72C5 /* SDL_sysjoystick.m in Sources */,
 				FAB598521BB5C31600BE72C5 /* SDL_joystick.c in Sources */,
 				FAB598551BB5C31600BE72C5 /* SDL_sysloadso.c in Sources */,
-				AADC5A651FDA10CB00960936 /* SDL_render_metal.m in Sources */,
 				FAB598561BB5C31600BE72C5 /* SDL_sysloadso.c in Sources */,
 				FAB598571BB5C31600BE72C5 /* SDL_power.c in Sources */,
 				F30D9CA1212CD0990047DF2E /* SDL_sensor.c in Sources */,
@@ -2849,7 +2842,6 @@
 				FD6526780DE8FCDD002AD96B /* SDL_error.c in Sources */,
 				FD65267A0DE8FCDD002AD96B /* SDL.c in Sources */,
 				FD65267B0DE8FCDD002AD96B /* SDL_syscond.c in Sources */,
-				AADC5A641FDA10C800960936 /* SDL_render_metal.m in Sources */,
 				FD65267C0DE8FCDD002AD96B /* SDL_sysmutex.c in Sources */,
 				FD65267D0DE8FCDD002AD96B /* SDL_syssem.c in Sources */,
 				FD65267E0DE8FCDD002AD96B /* SDL_systhread.c in Sources */,

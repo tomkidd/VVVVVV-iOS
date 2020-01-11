@@ -76,7 +76,7 @@ void FILESYSTEM_init(char *argvZero)
 #else
     // Just because I have to be different -tkidd
     strcpy(output, PHYSFS_getBaseDir());
-    strcat(output, "Contents/Resources/data.zip");
+    strcat(output, "data.zip");
 #endif
 	if (!PHYSFS_mount(output, NULL, 1))
 	{

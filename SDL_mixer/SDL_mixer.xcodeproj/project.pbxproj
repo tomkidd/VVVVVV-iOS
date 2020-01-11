@@ -26,7 +26,6 @@
 		A1D6C7BE23C94D4D00A408FD /* music_mikmod.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE405D81F9607C200EDAF53 /* music_mikmod.c */; };
 		A1D6C7BF23C94D4D00A408FD /* music_modplug.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE405C41F9607C000EDAF53 /* music_modplug.c */; };
 		A1D6C7C023C94D4D00A408FD /* music_mpg123.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE405DF1F9607C300EDAF53 /* music_mpg123.c */; };
-		A1D6C7C123C94D4D00A408FD /* music_nativemidi.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE405D51F9607C100EDAF53 /* music_nativemidi.c */; };
 		A1D6C7C223C94D4D00A408FD /* music_ogg.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE405D91F9607C200EDAF53 /* music_ogg.c */; };
 		A1D6C7C323C94D4D00A408FD /* music_opus.c in Sources */ = {isa = PBXBuildFile; fileRef = 630FBD8220D52105009867AB /* music_opus.c */; };
 		A1D6C7C423C94D4D00A408FD /* music_timidity.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE405D71F9607C200EDAF53 /* music_timidity.c */; };
@@ -655,7 +654,6 @@
 				A1D6C7CD23C94D6B00A408FD /* resample.c in Sources */,
 				A1D6C7B423C94D4D00A408FD /* effect_position.c in Sources */,
 				A1D6C7CC23C94D6B00A408FD /* readmidi.c in Sources */,
-				A1D6C7C123C94D4D00A408FD /* music_nativemidi.c in Sources */,
 				A1D6C7BE23C94D4D00A408FD /* music_mikmod.c in Sources */,
 				A1D6C7B523C94D4D00A408FD /* effect_stereoreverse.c in Sources */,
 				A1D6C7C323C94D4D00A408FD /* music_opus.c in Sources */,
@@ -788,7 +786,6 @@
 					MUSIC_CMD,
 					MUSIC_WAV,
 					MUSIC_MID,
-					MUSIC_MID_NATIVE,
 					MUSIC_MP3_DISABLED,
 				);
 				HEADER_SEARCH_PATHS = (
@@ -801,6 +798,7 @@
 				OTHER_LIBTOOL_FLAGS = "";
 				OTHER_REZFLAGS = "";
 				REZ_EXECUTABLE = YES;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -814,7 +812,6 @@
 					MUSIC_CMD,
 					MUSIC_WAV,
 					MUSIC_MID,
-					MUSIC_MID_NATIVE,
 					MUSIC_MP3_DISABLED,
 				);
 				HEADER_SEARCH_PATHS = (
@@ -827,6 +824,7 @@
 				OTHER_LIBTOOL_FLAGS = "";
 				OTHER_REZFLAGS = "";
 				REZ_EXECUTABLE = YES;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -908,7 +906,6 @@
 					MUSIC_MOD,
 					MUSIC_MP3_MPG123,
 					MUSIC_MID,
-					MUSIC_MID_NATIVE,
 					MUSIC_OGG,
 					MUSIC_FLAC,
 					MUSIC_OPUS,
@@ -968,7 +965,6 @@
 					MUSIC_MOD,
 					MUSIC_MP3_MPG123,
 					MUSIC_MID,
-					MUSIC_MID_NATIVE,
 					MUSIC_OGG,
 					MUSIC_FLAC,
 					MUSIC_OPUS,
