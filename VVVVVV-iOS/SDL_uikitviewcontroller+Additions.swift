@@ -35,9 +35,9 @@ extension SDL_uikitviewcontroller {
     }
 
     @objc func actionButton(rect: CGRect) -> UIButton {
-        actionButton = UIButton(frame: CGRect(x: rect.width - 50, y: rect.height - 100, width: 50, height: 50))
+        actionButton = UIButton(frame: CGRect(x: rect.width - 90, y: rect.height - 135, width: 75, height: 75))
         actionButton.setTitle("ACTION", for: .normal)
-        actionButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+//        actionButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         actionButton.setBackgroundImage(UIImage(named: "JoyStickBase")!, for: .normal)
         actionButton.addTarget(self, action: #selector(self.actionPressed), for: .touchDown)
         actionButton.addTarget(self, action: #selector(self.actionReleased), for: .touchUpInside)
@@ -46,8 +46,8 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func joyStick(rect: CGRect) -> JoyStickView {
-        let size = CGSize(width: 75.0, height: 75.0)
-        let joystick1Frame = CGRect(origin: CGPoint(x: 0.0,
+        let size = CGSize(width: 100.0, height: 100.0)
+        let joystick1Frame = CGRect(origin: CGPoint(x: 50.0,
                                                     y: (rect.height - size.height - 50.0)),
                                     size: size)
         joystickView = JoyStickView(frame: joystick1Frame)

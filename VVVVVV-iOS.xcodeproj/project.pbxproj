@@ -11,7 +11,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */; };
 		A19C840823CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */; };
 		A19C840B23CBD68300794474 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */; };
 		A19C840C23CBD68300794474 /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840A23CBD68300794474 /* JoyStickView.swift */; };
@@ -73,6 +72,7 @@
 		A1D6C80723CA8BD400A408FD /* libSDL2_mixer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7F323CA8A3E00A408FD /* libSDL2_mixer.a */; };
 		A1D6C80923CA8C8000A408FD /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C80823CA8C8000A408FD /* Metal.framework */; };
 		A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */; };
+		A1F93F6423CC192B00ABDE85 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F6323CC192B00ABDE85 /* Launch Screen.storyboard */; };
 		FA8B4B97196703B400F8EB7C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8B4B96196703B400F8EB7C /* CoreMotion.framework */; };
 		FAE0E9651BAF967F0098DFA4 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE0E9641BAF967F0098DFA4 /* GameController.framework */; };
 		FD779EDE0E26BA1200F39101 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD779EDD0E26BA1200F39101 /* CoreAudio.framework */; };
@@ -199,7 +199,6 @@
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SDL_uikitviewcontroller+Additions.swift"; sourceTree = "<group>"; };
 		A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		A19C840A23CBD68300794474 /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
@@ -305,6 +304,7 @@
 		A1D6C7EB23CA8A3E00A408FD /* SDL_mixer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_mixer.xcodeproj; path = "SDL2_mixer/Xcode-iOS/SDL_mixer.xcodeproj"; sourceTree = "<group>"; };
 		A1D6C80823CA8C8000A408FD /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1F93F6323CC192B00ABDE85 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FA8B4B96196703B400F8EB7C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FAE0E9641BAF967F0098DFA4 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		FD779EDD0E26BA1200F39101 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -380,7 +380,6 @@
 				A1D6C7D023C94E4500A408FD /* data.zip */,
 				A1D6C6D523C9485700A408FD /* VVVVVV */,
 				A19C83F923CBD63900794474 /* VVVVVV-iOS */,
-				945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */,
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -436,6 +435,7 @@
 				A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */,
 				A19C841023CBDAE700794474 /* sys_ios.h */,
 				A19C840E23CBD8E500794474 /* sys_ios.mm */,
+				A1F93F6323CC192B00ABDE85 /* Launch Screen.storyboard */,
 			);
 			path = "VVVVVV-iOS";
 			sourceTree = "<group>";
@@ -786,10 +786,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F93F6423CC192B00ABDE85 /* Launch Screen.storyboard in Resources */,
 				FD77A07D0E26BD8C00F39101 /* Icon.png in Resources */,
 				A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */,
 				FD77A07F0E26BDA900F39101 /* Default.png in Resources */,
-				945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */,
 				A1D6C7D123C94E4500A408FD /* data.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
