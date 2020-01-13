@@ -94,14 +94,14 @@ extension SDL_uikitviewcontroller: JoystickDelegate {
     
     func handleJoyStickPosition(x: CGFloat, y: CGFloat) {
         
-        if y > 0.25 {
-            Key_Event(key: SDLK_w, pressed: true)
-        } else if y < -0.25 {
-            Key_Event(key: SDLK_s, pressed: true)
-        } else {
-            Key_Event(key: SDLK_w, pressed: false)
-            Key_Event(key: SDLK_s, pressed: false)
-        }
+//        if y > 0.25 {
+//            Key_Event(key: SDLK_w, pressed: true)
+//        } else if y < -0.25 {
+//            Key_Event(key: SDLK_s, pressed: true)
+//        } else {
+//            Key_Event(key: SDLK_w, pressed: false)
+//            Key_Event(key: SDLK_s, pressed: false)
+//        }
         
         if x > 0.25 {
             Key_Event(key: SDLK_d, pressed: true)
