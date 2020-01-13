@@ -429,13 +429,13 @@
 		A19C83F923CBD63900794474 /* VVVVVV-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A19C840D23CBD6A500794474 /* bridging.h */,
 				A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */,
+				A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */,
 				A19C840A23CBD68300794474 /* JoyStickView.swift */,
 				A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */,
-				A19C840D23CBD6A500794474 /* bridging.h */,
-				A19C840E23CBD8E500794474 /* sys_ios.mm */,
 				A19C841023CBDAE700794474 /* sys_ios.h */,
-				A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */,
+				A19C840E23CBD8E500794474 /* sys_ios.mm */,
 			);
 			path = "VVVVVV-iOS";
 			sourceTree = "<group>";
@@ -928,6 +928,7 @@
 				PRODUCT_NAME = VVVVVV;
 				SWIFT_OBJC_BRIDGING_HEADER = "VVVVVV-iOS/bridging.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = ../../../include;
 			};
 			name = Debug;
@@ -962,6 +963,7 @@
 				PRODUCT_NAME = VVVVVV;
 				SWIFT_OBJC_BRIDGING_HEADER = "VVVVVV-iOS/bridging.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = ../../../include;
 			};
 			name = Release;

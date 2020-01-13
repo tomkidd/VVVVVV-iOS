@@ -30,9 +30,9 @@
             filePath = "VVVVVV-iOS/SDL_uikitviewcontroller+Additions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "firePressed(sender:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "actionPressed(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "VVVVVV-iOS/SDL_uikitviewcontroller+Additions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
-            landmarkName = "fireReleased(sender:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "actionReleased(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

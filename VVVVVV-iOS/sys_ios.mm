@@ -34,12 +34,7 @@ void Sys_AddControls(SDL_Window *sdlWindow) {
         SDL_uikitviewcontroller *rootVC = (SDL_uikitviewcontroller *)GetSDLViewController(sdlWindow);
         NSLog(@"root VC = %@",rootVC);
 
-        [rootVC.view addSubview:[rootVC fireButtonWithRect:[rootVC.view frame]]];
-        [rootVC.view addSubview:[rootVC jumpButtonWithRect:[rootVC.view frame]]];
+        [rootVC.view addSubview:[rootVC actionButtonWithRect:[rootVC.view frame]]];
         [rootVC.view addSubview:[rootVC joyStickWithRect:[rootVC.view frame]]];
-        [rootVC.view addSubview:[rootVC buttonStackWithRect:[rootVC.view frame]]];
-        [rootVC.view addSubview:[rootVC f1ButtonWithRect:[rootVC.view frame]]];
-        [rootVC.view addSubview:[rootVC prevWeaponButtonWithRect:[rootVC.view frame]]];
-        [rootVC.view addSubview:[rootVC nextWeaponButtonWithRect:[rootVC.view frame]]];
     #endif
 }
