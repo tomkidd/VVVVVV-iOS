@@ -13,7 +13,7 @@
 #if TARGET_OS_TV
 #import "VVVVVV_tvOS-Swift.h"
 #else
-#import "VVVVVV-Swift.h"
+#import "VVVVVV_iOS-Swift.h"
 #endif
 
 UIViewController* GetSDLViewController(SDL_Window *sdlWindow) {
