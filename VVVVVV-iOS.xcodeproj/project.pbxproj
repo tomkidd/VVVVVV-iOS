@@ -146,8 +146,6 @@
 		A1D6C80723CA8BD400A408FD /* libSDL2_mixer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7F323CA8A3E00A408FD /* libSDL2_mixer.a */; };
 		A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */; };
 		A1F93F6423CC192B00ABDE85 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F6323CC192B00ABDE85 /* Launch Screen.storyboard */; };
-		FD77A07D0E26BD8C00F39101 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD77A07C0E26BD8C00F39101 /* Icon.png */; };
-		FD77A07F0E26BDA900F39101 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD77A07E0E26BDA900F39101 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -446,8 +444,6 @@
 		A1D6C7EB23CA8A3E00A408FD /* SDL_mixer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_mixer.xcodeproj; path = "SDL2_mixer/Xcode-iOS/SDL_mixer.xcodeproj"; sourceTree = "<group>"; };
 		A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A1F93F6323CC192B00ABDE85 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		FD77A07C0E26BD8C00F39101 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		FD77A07E0E26BDA900F39101 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,8 +571,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FD77A07E0E26BDA900F39101 /* Default.png */,
-				FD77A07C0E26BD8C00F39101 /* Icon.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;
@@ -1097,9 +1091,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F93F6423CC192B00ABDE85 /* Launch Screen.storyboard in Resources */,
-				FD77A07D0E26BD8C00F39101 /* Icon.png in Resources */,
 				A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */,
-				FD77A07F0E26BDA900F39101 /* Default.png in Resources */,
 				A1D6C7D123C94E4500A408FD /* data.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
