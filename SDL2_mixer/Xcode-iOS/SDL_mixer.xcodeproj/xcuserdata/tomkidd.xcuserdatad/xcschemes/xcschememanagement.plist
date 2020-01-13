@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>All (iOS).xcscheme_^#shared#^_</key>
+		<key>AA5314501FE0FE2E0025C9BE</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>15</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>All (tvOS).xcscheme_^#shared#^_</key>
+		<key>AA5314F21FE0FE750025C9BE</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDL_mixer-iOS.xcscheme_^#shared#^_</key>
+		<key>AA5314F71FE0FEC70025C9BE</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDL_mixer-tvOS.xcscheme_^#shared#^_</key>
+		<key>BE1FA90707AF96B2004B6283</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>14</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -3,51 +3,53 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>All-iOS.xcscheme_^#shared#^_</key>
+		<key>00B4F48B12F6A69C0084EC00</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>All-tvOS.xcscheme_^#shared#^_</key>
+		<key>52ED1D6B222889500061FCE0</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>PrepareXcodeProjectTemplate.xcscheme_^#shared#^_</key>
+		<key>C143576D1F4C4DAA000B792B</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDL-iOS-dylib.xcscheme_^#shared#^_</key>
+		<key>C14357721F4C4F2A000B792B</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDL-iOS.xcscheme_^#shared#^_</key>
+		<key>F3E3C56022406928007D243C</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDL-tvOS-dylib.xcscheme_^#shared#^_</key>
+		<key>F3E3C6592241389A007D243C</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDL-tvOS.xcscheme_^#shared#^_</key>
+		<key>F3E3C758224138AE007D243C</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDLmain-iOS.xcscheme_^#shared#^_</key>
+		<key>FAB598131BB5C1B100BE72C5</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>libSDLmain-tvOS.xcscheme_^#shared#^_</key>
+		<key>FD6526620DE8FCCB002AD96B</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
