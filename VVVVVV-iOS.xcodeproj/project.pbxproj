@@ -12,6 +12,10 @@
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */; };
+		A19C840823CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */; };
+		A19C840B23CBD68300794474 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */; };
+		A19C840C23CBD68300794474 /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840A23CBD68300794474 /* JoyStickView.swift */; };
+		A19C840F23CBD8E500794474 /* sys_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = A19C840E23CBD8E500794474 /* sys_ios.mm */; };
 		A1D6C73923C9489900A408FD /* physfs_platform_apple.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6C6DF23C9489800A408FD /* physfs_platform_apple.m */; };
 		A1D6C74023C9489900A408FD /* GraphicsUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1D6C6EC23C9489800A408FD /* GraphicsUtil.cpp */; };
 		A1D6C74123C9489900A408FD /* titlerender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1D6C6ED23C9489800A408FD /* titlerender.cpp */; };
@@ -68,6 +72,7 @@
 		A1D6C80623CA8BD400A408FD /* libSDLmain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7E823CA8A1F00A408FD /* libSDLmain.a */; };
 		A1D6C80723CA8BD400A408FD /* libSDL2_mixer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7F323CA8A3E00A408FD /* libSDL2_mixer.a */; };
 		A1D6C80923CA8C8000A408FD /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C80823CA8C8000A408FD /* Metal.framework */; };
+		A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */; };
 		FA8B4B97196703B400F8EB7C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8B4B96196703B400F8EB7C /* CoreMotion.framework */; };
 		FAE0E9651BAF967F0098DFA4 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE0E9641BAF967F0098DFA4 /* GameController.framework */; };
 		FD779EDE0E26BA1200F39101 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD779EDD0E26BA1200F39101 /* CoreAudio.framework */; };
@@ -195,6 +200,12 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SDL_uikitviewcontroller+Additions.swift"; sourceTree = "<group>"; };
+		A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
+		A19C840A23CBD68300794474 /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
+		A19C840D23CBD6A500794474 /* bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridging.h; sourceTree = "<group>"; };
+		A19C840E23CBD8E500794474 /* sys_ios.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = sys_ios.mm; sourceTree = "<group>"; };
+		A19C841023CBDAE700794474 /* sys_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sys_ios.h; sourceTree = "<group>"; };
 		A1D6C6D723C9489800A408FD /* physfs_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = physfs_internal.h; sourceTree = "<group>"; };
 		A1D6C6D823C9489800A408FD /* physfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = physfs.c; sourceTree = "<group>"; };
 		A1D6C6D923C9489800A408FD /* physfs_platform_unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = physfs_platform_unix.c; sourceTree = "<group>"; };
@@ -293,6 +304,7 @@
 		A1D6C7D323CA8A1F00A408FD /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "SDL2/Xcode-iOS/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		A1D6C7EB23CA8A3E00A408FD /* SDL_mixer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_mixer.xcodeproj; path = "SDL2_mixer/Xcode-iOS/SDL_mixer.xcodeproj"; sourceTree = "<group>"; };
 		A1D6C80823CA8C8000A408FD /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA8B4B96196703B400F8EB7C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		FAE0E9641BAF967F0098DFA4 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		FD779EDD0E26BA1200F39101 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -367,6 +379,7 @@
 			children = (
 				A1D6C7D023C94E4500A408FD /* data.zip */,
 				A1D6C6D523C9485700A408FD /* VVVVVV */,
+				A19C83F923CBD63900794474 /* VVVVVV-iOS */,
 				945C4F52195AF17F00DBBF61 /* Default-568h@2x.png */,
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -411,6 +424,20 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A19C83F923CBD63900794474 /* VVVVVV-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */,
+				A19C840A23CBD68300794474 /* JoyStickView.swift */,
+				A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */,
+				A19C840D23CBD6A500794474 /* bridging.h */,
+				A19C840E23CBD8E500794474 /* sys_ios.mm */,
+				A19C841023CBDAE700794474 /* sys_ios.h */,
+				A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */,
+			);
+			path = "VVVVVV-iOS";
 			sourceTree = "<group>";
 		};
 		A1D6C6D523C9485700A408FD /* VVVVVV */ = {
@@ -760,6 +787,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD77A07D0E26BD8C00F39101 /* Icon.png in Resources */,
+				A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */,
 				FD77A07F0E26BDA900F39101 /* Default.png in Resources */,
 				945C4F53195AF17F00DBBF61 /* Default-568h@2x.png in Resources */,
 				A1D6C7D123C94E4500A408FD /* data.zip in Resources */,
@@ -777,10 +805,12 @@
 				A1D6C74D23C9489900A408FD /* Tower.cpp in Sources */,
 				A1D6C74F23C9489900A408FD /* Labclass.cpp in Sources */,
 				A1D6C75A23C9489900A408FD /* Scripts.cpp in Sources */,
+				A19C840F23CBD8E500794474 /* sys_ios.mm in Sources */,
 				A1D6C75623C9489900A408FD /* editor.cpp in Sources */,
 				A1D6C74C23C9489900A408FD /* preloader.cpp in Sources */,
 				A1D6C75323C9489900A408FD /* Map.cpp in Sources */,
 				A1D6C75423C9489900A408FD /* BinaryBlob.cpp in Sources */,
+				A19C840C23CBD68300794474 /* JoyStickView.swift in Sources */,
 				A1D6C75E23C9489900A408FD /* UtilityClass.cpp in Sources */,
 				A1D6C75D23C9489900A408FD /* BlockV.cpp in Sources */,
 				A1D6C74923C9489900A408FD /* Otherlevel.cpp in Sources */,
@@ -789,6 +819,7 @@
 				A1D6C74523C9489900A408FD /* Logic.cpp in Sources */,
 				A1D6C74A23C9489900A408FD /* GraphicsResources.cpp in Sources */,
 				A1D6C74023C9489900A408FD /* GraphicsUtil.cpp in Sources */,
+				A19C840B23CBD68300794474 /* CoreGraphics+Additions.swift in Sources */,
 				A1D6C74823C9489900A408FD /* Screen.cpp in Sources */,
 				A1D6C75023C9489900A408FD /* Music.cpp in Sources */,
 				A1D6C74323C9489900A408FD /* Input.cpp in Sources */,
@@ -800,6 +831,7 @@
 				A1D6C74B23C9489900A408FD /* WarpClass.cpp in Sources */,
 				A1D6C75523C9489900A408FD /* KeyPoll.cpp in Sources */,
 				A1D6C75923C9489900A408FD /* Spacestation2.cpp in Sources */,
+				A19C840823CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift in Sources */,
 				A1D6C75B23C9489900A408FD /* main.cpp in Sources */,
 				A1D6C75723C9489900A408FD /* Textbox.cpp in Sources */,
 				A1D6C75C23C9489900A408FD /* Finalclass.cpp in Sources */,
@@ -869,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -877,16 +910,24 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'PHYSFS_SUPPORTS_DEFAULT=0'",
+					"'PHYSFS_SUPPORTS_ZIP=1'",
+					IOS,
+				);
 				HEADER_SEARCH_PATHS = (
 					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include",
 					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer",
 					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/VVVVVV/physfs",
+					"$(PROJECT_DIR)/SDL2/**",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomkiddconsulting.VVVVVV;
 				PRODUCT_NAME = VVVVVV;
+				SWIFT_OBJC_BRIDGING_HEADER = "VVVVVV-iOS/bridging.h";
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = ../../../include;
 			};
 			name = Debug;
@@ -895,22 +936,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'PHYSFS_SUPPORTS_DEFAULT=0'",
+					"'PHYSFS_SUPPORTS_ZIP=1'",
+					IOS,
+				);
 				HEADER_SEARCH_PATHS = (
 					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include",
 					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer",
 					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/VVVVVV/physfs",
+					"$(PROJECT_DIR)/SDL2/**",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomkiddconsulting.VVVVVV;
 				PRODUCT_NAME = VVVVVV;
+				SWIFT_OBJC_BRIDGING_HEADER = "VVVVVV-iOS/bridging.h";
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = ../../../include;
 			};
 			name = Release;

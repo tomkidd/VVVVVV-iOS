@@ -5,6 +5,10 @@
 
 #include <stdlib.h>
 
+#ifdef IOS
+#include "sys_ios.h"
+#endif
+
 // Used to create the window icon
 extern "C"
 {
@@ -87,6 +91,10 @@ Screen::Screen()
     badSignalEffect = false;
 
     glScreen = true;
+    
+#ifdef IOS
+    Sys_AddControls(m_window);
+#endif
 }
 
 void Screen::ResizeScreen(int x , int y)
