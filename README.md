@@ -1,42 +1,39 @@
-<img align="left" width="100" height="100" src="https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/icon_doom3.png">  
+<img align="left" width="100" height="100" src="https://raw.githubusercontent.com/tomkidd/VVVVVV-iOS/master/icon_vvvvvv.png">  
 
-#  DOOM 3 for iOS and tvOS for Apple TV
+#  VVVVVV for iOS and tvOS for Apple TV
 
 &nbsp;
 
-This is my port of DOOM 3 for iOS, running in modern resolutions including the full width of the iPhone X. I have also made a target and version for tvOS to run on Apple TV.
+This is my port of VVVVVV for iOS. I have also made a target and version for tvOS to run on Apple TV. **This version is based off of the C++ source code rather than the Flash source code**. 
 
-![screenshot](https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/ss_doom3.png)
+![screenshot](https://raw.githubusercontent.com/tomkidd/VVVVVV-iOS/master/ss_vvvvvv.png)
 
 Features
 
-- Tested and builds on Xcode 10.
-- Runs single player campaigns at full screen and full speed on iOS
-- Support for original campaign and expansion pack campaigns via separate apps.
+- Tested and builds on Xcode 11.
+- Runs single player campaign at full screen and full speed on iOS
 - MFi controller support (reccomended) and on-screen control options
 - Second project target for tvOS that takes advantage of focus model and removes on-screen controls.
-- Limited support for native menus of original game
+- Supports native menus of original game.
 
-This commit does not need any placeholder resources as it is not an update of an existing id Software port. 
+As of this writing, VVVVVV is [still available for purchase on the App Store](https://apps.apple.com/us/app/vvvvvv/id880645949) and so if you want to play the game on your iPhone right now this is the quickest way to do so. It is also considerably more tested than this version.
 
-**NOTE: this is a port of the *original* DOOM 3 from 2004, not the DOOM 3: BFG Edition from 2012**
+The version of VVVVVV on the App Store is based off of the original source code which was written in Flash, which is available [here](https://github.com/TerryCavanagh/VVVVVV/tree/master/mobile_version). The desktop version was converted to use C++ and SDL in 2011, the source for that version is available [here](https://github.com/TerryCavanagh/VVVVVV/tree/master/desktop_version). The version I have posted in this repo is for iOS but it is based off of the C++ version just to see how hard it would be to do. This repo also contains a port to the Apple TV which did not exist previously. 
 
-You will need to provide your own copies of the `base` and `d3xp` directories from an existing instalation of DOOM 3. The latter directory is only needed if you want to run the expansion. You can buy *DOOM 3* on Steam [here](https://store.steampowered.com/app/9050/DOOM_3/). You can buy the expansion pack *DOOM 3: Resurrection of Evil* on Steam [here](https://store.steampowered.com/app/9070/DOOM_3_Resurrection_of_Evil/). Note that GOG does not sell the original game, they only sell the *BFG Edition* which is incompatible with this release. 
+You will need to provide your own copies of the `data.zip` file from an existing instalation of VVVVVV ([Steam](https://store.steampowered.com/app/70300/VVVVVV/), [GOG](https://www.gog.com/game/vvvvvv), [Humble](https://www.humblebundle.com/store/vvvvvv)) or you can acquire it from Terry Cavanagh's site [here](https://thelettervsixtim.es/makeandplay/) as part of the "Make and Play" version of the game. In accordance with his wishes I am not including it here. In the Xcode project modify the file reference to "data.zip" to point to wherever your data.zip file is.
 
-There are two Xcode project files, one for DOOM 3, `DOOM3-iOS.xcodeproj`, and one for the expansion pack, `DOOM3xp-iOS.xcodeproj`. You will need to drag your directories into the project and select "Create Folder References". The `base` folder needs to be added to the DOOM 3 project and target, while both the `base` and `d3xp` folders need to be added to the expansion pack project. The folders will be blue if you've done it right:
+![folders](https://raw.githubusercontent.com/tomkidd/VVVVVV-iOS/master/folders_vvvvvv.png)
 
-![folders](https://github.com/tomkidd/DOOM3-iOS/raw/master/folders.png)
+Article is forthcoming.
 
-![foldersxp](https://github.com/tomkidd/DOOM3-iOS/raw/master/foldersxp.png)
+<!--You can read a lengthy blog article on how I did all this [here](http://schnapple.com/doom-3-for-ios-and-tvos-for-apple-tv/).-->
 
-You can read a lengthy blog article on how I did all this [here](http://schnapple.com/doom-3-for-ios-and-tvos-for-apple-tv/).
+This port was based on the [source code to VVVVVV](https://github.com/TerryCavanagh/VVVVVV) released as open source by Terry Cavanaugh and uses [SDL for iOS](https://www.libsdl.org/). On-screen joystick code came from [this repo](https://github.com/bradhowes/Joystick) by Brad Howe. I also studied the iOS port of [Hedgewars](https://github.com/hedgewars/hw) for information on how to use UIKit alongside SDL.
 
-This port was based on [dhewm3](https://dhewm3.org/) and uses [SDL for iOS](https://www.libsdl.org/). I also referenced to [this fork for WebAssembly/WebGL](https://github.com/gabrielcuvillier/d3wasm) from Gabriel Cuvillier for OpenGL ES code. On-screen joystick code came from [this repo](https://github.com/bradhowes/Joystick) by Brad Howe. Font Diablo Heavy available [here](https://fontzone.net/font-details/diablo-heavy). I also studied the iOS port of [Hedgewars](https://github.com/hedgewars/hw) for information on how to use UIKit alongside SDL.
-
-[Video of DOOM 3 running on an iPhone X](https://www.youtube.com/watch?v=KEaeWKSfgB8)
+<!--[Video of DOOM 3 running on an iPhone X](https://www.youtube.com/watch?v=KEaeWKSfgB8)-->
 
 <!--[Video of DOOM 3 running on an Apple TV](https://www.youtube.com/watch?v=jjO2pAVgb84)-->
 
-I have also made apps for [*Wolfenstein 3-D*](https://github.com/tomkidd/Wolf3D-iOS), [*DOOM*, *DOOM II* and *Final DOOM*](https://github.com/tomkidd/DOOM-iOS), [*Quake*](https://github.com/tomkidd/Quake-iOS), [*Quake II*](https://github.com/tomkidd/Quake2-iOS), [*Quake III: Arena*](https://github.com/tomkidd/Quake3-iOS) and [*Return to Castle Wolfenstein*](https://github.com/tomkidd/RTCW-iOS). 
+I have also made iOS and tvOS ports for various other games which can be found [at my main GitHub repo](https://github.com/tomkidd/). As a stepping stone to this iOS version I also made an Xcode project for macOS which can be found [here](https://github.com/tomkidd/VVVVVV-macOS). It's identical to the main code except it bundles the data in to the .app file and gives it an icon. I've provided it if anyone's curious but if you want to get into contributing to the VVVVV source you should reference the [original repo](https://github.com/TerryCavanagh/VVVVVV/) instead.
 
 Have fun. For any questions I can be reached at tomkidd@gmail.com
