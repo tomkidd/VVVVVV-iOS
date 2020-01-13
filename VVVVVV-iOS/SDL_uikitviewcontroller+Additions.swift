@@ -226,18 +226,24 @@ extension SDL_uikitviewcontroller {
 
     
     @objc func firePressed(sender: UIButton!) {
+        Key_Event(key: SDLK_z, pressed: true)
+        print("firePressed")
 //        Key_Event(137, qboolean(1), qboolean(1))
     }
     
     @objc func fireReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_z, pressed: false)
+        print("fireReleased")
 //        Key_Event(137, qboolean(0), qboolean(1))
     }
     
     @objc func jumpPressed(sender: UIButton!) {
+        Key_Event(key: SDLK_RETURN, pressed: true)
 //        Key_Event(32, qboolean(1), qboolean(1))
     }
     
     @objc func jumpReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_RETURN, pressed: false)
 //        Key_Event(32, qboolean(0), qboolean(1))
     }
     
@@ -285,6 +291,14 @@ extension SDL_uikitviewcontroller {
 //    func Key_Event(_ key: Int32, _ down: qboolean, _ special: qboolean) {
 //        CL_KeyEvent(key, down, UInt32(Sys_Milliseconds()))
 //    }
+    
+    func Key_Event(key: Int, pressed: Bool) {
+        var event = SDL_Event()
+        event.type = pressed ? SDL_KEYDOWN.rawValue : SDL_KEYUP.rawValue
+        event.key.keysym.sym = SDL_Keycode(key)
+        event.key.state = Uint8(pressed ? SDL_PRESSED : SDL_RELEASED)
+        SDL_PushEvent(&event)
+    }
 
     @objc func expand(_ sender: Any) {
         buttonStackExpanded = !buttonStackExpanded
@@ -323,12 +337,18 @@ extension SDL_uikitviewcontroller {
 extension SDL_uikitviewcontroller: JoystickDelegate {
     
     func handleJoyStickPosition(x: CGFloat, y: CGFloat) {
+        
+        print("x: \(x) y: \(y)")
 
-        if y > 0 {
+        if y > 0.25 {
+            Key_Event(key: SDLK_w, pressed: true)
+              print("w")
 //            cl_joyscale_y.0 = Int32(abs(y) * 60)
 //            Key_Event(132, qboolean(1), qboolean(1))
 //            Key_Event(133, qboolean(0), qboolean(1))
-        } else if y < 0 {
+        } else if y < -0.25 {
+            Key_Event(key: SDLK_s, pressed: true)
+            print("s")
 //            cl_joyscale_y.1 = Int32(abs(y) * 60)
 //            Key_Event(132, qboolean(0), qboolean(1))
 //            Key_Event(133, qboolean(1), qboolean(1))
@@ -337,17 +357,25 @@ extension SDL_uikitviewcontroller: JoystickDelegate {
 //            cl_joyscale_y.1 = 0
 //            Key_Event(132, qboolean(0), qboolean(1))
 //            Key_Event(133, qboolean(0), qboolean(1))
+            Key_Event(key: SDLK_w, pressed: false)
+            Key_Event(key: SDLK_s, pressed: false)
         }
         
         if x > 0.25 {
+            Key_Event(key: SDLK_d, pressed: true)
+            print("a")
 //            cl_joyscale_x.0 = Int32(abs(y) * 20)
 //            Key_Event(135, qboolean(1), qboolean(1))
 //            Key_Event(134, qboolean(0), qboolean(1))
         } else if x < -0.25 {
+            Key_Event(key: SDLK_a, pressed: true)
+            print("d")
 //            cl_joyscale_x.1 = Int32(abs(y) * 20)
 //            Key_Event(135, qboolean(0), qboolean(1))
 //            Key_Event(134, qboolean(1), qboolean(1))
         } else {
+            Key_Event(key: SDLK_d, pressed: false)
+            Key_Event(key: SDLK_a, pressed: false)
 //            cl_joyscale_x.0 = 0
 //            cl_joyscale_x.1 = 0
 //            Key_Event(135, qboolean(0), qboolean(1))

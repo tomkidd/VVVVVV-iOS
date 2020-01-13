@@ -10,11 +10,8 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Weverything"
+#include "SDL.h"
 #include "SDL_uikitviewcontroller.h"
 #pragma clang diagnostic pop
-
-//int cl_joyscale_x[2];
-//int cl_joyscale_y[2];
-
 
 #endif /* bridging_h */
