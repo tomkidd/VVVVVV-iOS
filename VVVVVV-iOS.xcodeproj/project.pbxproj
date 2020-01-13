@@ -18,6 +18,11 @@
 		A1203B5223CC2AD9000886AB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1203B4623CC2AC8000886AB /* OpenGLES.framework */; };
 		A1203B5323CC2AD9000886AB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1203B4323CC2AC8000886AB /* QuartzCore.framework */; };
 		A1203B5423CC2AD9000886AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1203B4923CC2AC9000886AB /* UIKit.framework */; };
+		A1203B5D23CCA5D4000886AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1203B5C23CCA5D4000886AB /* AppDelegate.swift */; };
+		A1203B5F23CCA5D4000886AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1203B5E23CCA5D4000886AB /* ViewController.swift */; };
+		A1203B6223CCA5D4000886AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1203B6023CCA5D4000886AB /* Main.storyboard */; };
+		A1203B6423CCA5D6000886AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1203B6323CCA5D6000886AB /* Assets.xcassets */; };
+		A1203B6723CCA5D6000886AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1203B6523CCA5D6000886AB /* LaunchScreen.storyboard */; };
 		A19C840823CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */; };
 		A19C840B23CBD68300794474 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */; };
 		A19C840C23CBD68300794474 /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840A23CBD68300794474 /* JoyStickView.swift */; };
@@ -206,6 +211,13 @@
 		A1203B4723CC2AC9000886AB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A1203B4823CC2AC9000886AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A1203B4923CC2AC9000886AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1203B5A23CCA5D4000886AB /* VVVVVV-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VVVVVV-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1203B5C23CCA5D4000886AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1203B5E23CCA5D4000886AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1203B6123CCA5D4000886AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1203B6323CCA5D6000886AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1203B6623CCA5D6000886AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1203B6823CCA5D6000886AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SDL_uikitviewcontroller+Additions.swift"; sourceTree = "<group>"; };
 		A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		A19C840A23CBD68300794474 /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
@@ -339,6 +351,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1203B5723CCA5D4000886AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1D6C76723C9491000A408FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +389,7 @@
 				A1D6C76A23C9491000A408FD /* libphysfs.a */,
 				A1D6C78023C9494100A408FD /* liblodepng.a */,
 				A1D6C78D23C9496200A408FD /* libtinyxml.a */,
+				A1203B5A23CCA5D4000886AB /* VVVVVV-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -380,19 +400,12 @@
 				A1D6C7D023C94E4500A408FD /* data.zip */,
 				A1D6C6D523C9485700A408FD /* VVVVVV */,
 				A19C83F923CBD63900794474 /* VVVVVV-iOS */,
-				29B97315FDCFA39411CA2CEA /* Sources */,
+				A1203B5B23CCA5D4000886AB /* VVVVVV-tvOS */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Sources;
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -409,8 +422,9 @@
 			isa = PBXGroup;
 			children = (
 				A1203B3123CC2ABF000886AB /* iOS */,
-				A1D6C7D323CA8A1F00A408FD /* SDL.xcodeproj */,
 				A1D6C7EB23CA8A3E00A408FD /* SDL_mixer.xcodeproj */,
+				A1D6C7D323CA8A1F00A408FD /* SDL.xcodeproj */,
+				A1203B5523CC2AEA000886AB /* tvOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -431,6 +445,26 @@
 				A1203B4923CC2AC9000886AB /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		A1203B5523CC2AEA000886AB /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		A1203B5B23CCA5D4000886AB /* VVVVVV-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				A1203B5C23CCA5D4000886AB /* AppDelegate.swift */,
+				A1203B5E23CCA5D4000886AB /* ViewController.swift */,
+				A1203B6023CCA5D4000886AB /* Main.storyboard */,
+				A1203B6323CCA5D6000886AB /* Assets.xcassets */,
+				A1203B6523CCA5D6000886AB /* LaunchScreen.storyboard */,
+				A1203B6823CCA5D6000886AB /* Info.plist */,
+			);
+			path = "VVVVVV-tvOS";
 			sourceTree = "<group>";
 		};
 		A19C83F923CBD63900794474 /* VVVVVV-iOS */ = {
@@ -622,6 +656,23 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* VVVVVV.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A1203B5923CCA5D4000886AB /* VVVVVV-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1203B6923CCA5D6000886AB /* Build configuration list for PBXNativeTarget "VVVVVV-tvOS" */;
+			buildPhases = (
+				A1203B5623CCA5D4000886AB /* Sources */,
+				A1203B5723CCA5D4000886AB /* Frameworks */,
+				A1203B5823CCA5D4000886AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VVVVVV-tvOS";
+			productName = "VVVVVV-tvOS";
+			productReference = A1203B5A23CCA5D4000886AB /* VVVVVV-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A1D6C76923C9491000A408FD /* physfs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1D6C77023C9491000A408FD /* Build configuration list for PBXNativeTarget "physfs" */;
@@ -679,10 +730,15 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 9UY8SFDNQ8;
+					};
+					A1203B5923CCA5D4000886AB = {
+						CreatedOnToolsVersion = 11.3;
+						ProvisioningStyle = Automatic;
 					};
 					A1D6C76923C9491000A408FD = {
 						CreatedOnToolsVersion = 11.3;
@@ -707,6 +763,7 @@
 				Japanese,
 				French,
 				German,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -723,6 +780,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* VVVVVV-iOS */,
+				A1203B5923CCA5D4000886AB /* VVVVVV-tvOS */,
 				A1D6C76923C9491000A408FD /* physfs */,
 				A1D6C77F23C9494100A408FD /* lodepng */,
 				A1D6C78C23C9496200A408FD /* tinyxml */,
@@ -802,6 +860,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1203B5823CCA5D4000886AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1203B6723CCA5D6000886AB /* LaunchScreen.storyboard in Resources */,
+				A1203B6423CCA5D6000886AB /* Assets.xcassets in Resources */,
+				A1203B6223CCA5D4000886AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -846,6 +914,15 @@
 				A1D6C75823C9489900A408FD /* TerminalScripts.cpp in Sources */,
 				A1D6C75123C9489900A408FD /* Graphics.cpp in Sources */,
 				A1D6C74E23C9489900A408FD /* FileSystemUtils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1203B5623CCA5D4000886AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1203B5F23CCA5D4000886AB /* ViewController.swift in Sources */,
+				A1203B5D23CCA5D4000886AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,6 +980,25 @@
 			targetProxy = A1D6C7A123C9498800A408FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1203B6023CCA5D4000886AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1203B6123CCA5D4000886AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1203B6523CCA5D6000886AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1203B6623CCA5D6000886AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -973,6 +1069,87 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = ../../../include;
+			};
+			name = Release;
+		};
+		A1203B6A23CCA5D6000886AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "VVVVVV-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomkiddconsulting.VVVVVV-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		A1203B6B23CCA5D6000886AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "VVVVVV-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tomkiddconsulting.VVVVVV-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1411,6 +1588,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1203B6923CCA5D6000886AB /* Build configuration list for PBXNativeTarget "VVVVVV-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1203B6A23CCA5D6000886AB /* Debug */,
+				A1203B6B23CCA5D6000886AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
