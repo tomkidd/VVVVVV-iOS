@@ -83,8 +83,9 @@ void FILESYSTEM_init(char *argvZero)
 	strcpy(output, PHYSFS_getBaseDir());
 	strcat(output, "data.zip");
 #else
-    // Just because I have to be different -tkidd
+#ifdef IOS
     strcpy(output, PHYSFS_getBaseDir());
+#endif
     strcat(output, "data.zip");
 #endif
 	if (!PHYSFS_mount(output, NULL, 1))
