@@ -36,5 +36,7 @@ void Sys_AddControls(SDL_Window *sdlWindow) {
 
         [rootVC.view addSubview:[rootVC actionButtonWithRect:[rootVC.view frame]]];
         [rootVC.view addSubview:[rootVC joyStickWithRect:[rootVC.view frame]]];
+        [rootVC.view addSubview:[rootVC enterButtonWithRect:[rootVC.view frame]]];
+        [rootVC.view addSubview:[rootVC escapeButtonWithRect:[rootVC.view frame]]];
     #endif
 }

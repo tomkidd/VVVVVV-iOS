@@ -14,6 +14,8 @@ extension SDL_uikitviewcontroller {
     struct Holder {
         static var _actionButton = UIButton()
         static var _joystickView = JoyStickView(frame: .zero)
+        static var _escapeButton = UIButton()
+        static var _enterButton = UIButton()
     }
     
     var actionButton:UIButton {
@@ -33,6 +35,24 @@ extension SDL_uikitviewcontroller {
             Holder._joystickView = newValue
         }
     }
+    
+    var escapeButton:UIButton {
+        get {
+            return Holder._escapeButton
+        }
+        set(newValue) {
+            Holder._escapeButton = newValue
+        }
+    }
+
+    var enterButton:UIButton {
+        get {
+            return Holder._enterButton
+        }
+        set(newValue) {
+            Holder._enterButton = newValue
+        }
+    }
 
     @objc func actionButton(rect: CGRect) -> UIButton {
         actionButton = UIButton(frame: CGRect(x: rect.width - 90, y: rect.height - 135, width: 75, height: 75))
@@ -43,6 +63,28 @@ extension SDL_uikitviewcontroller {
         actionButton.addTarget(self, action: #selector(self.actionReleased), for: .touchUpInside)
         actionButton.alpha = 0.5
         return actionButton
+    }
+    
+    @objc func escapeButton(rect: CGRect) -> UIButton {
+        escapeButton = UIButton(frame: CGRect(x: 10, y: 10, width: 50, height: 30))
+        escapeButton.setTitle(" ESC ", for: .normal)
+        escapeButton.addTarget(self, action: #selector(self.escapePressed), for: .touchDown)
+        escapeButton.addTarget(self, action: #selector(self.escapeReleased), for: .touchUpInside)
+        escapeButton.layer.borderColor = UIColor.white.cgColor
+        escapeButton.layer.borderWidth = CGFloat(1)
+        escapeButton.alpha = 0.5
+        return escapeButton
+    }
+    
+    @objc func enterButton(rect: CGRect) -> UIButton {
+        enterButton = UIButton(frame: CGRect(x: rect.width - 70, y: 10, width: 60, height: 30))
+        enterButton.setTitle(" MENU ", for: .normal)
+        enterButton.addTarget(self, action: #selector(self.enterPressed), for: .touchDown)
+        enterButton.addTarget(self, action: #selector(self.enterReleased), for: .touchUpInside)
+        enterButton.layer.borderColor = UIColor.white.cgColor
+        enterButton.layer.borderWidth = CGFloat(1)
+        enterButton.alpha = 0.5
+        return enterButton
     }
     
     @objc func joyStick(rect: CGRect) -> JoyStickView {
@@ -68,6 +110,22 @@ extension SDL_uikitviewcontroller {
         Key_Event(key: SDLK_z, pressed: false)
     }
     
+    @objc func escapePressed(sender: UIButton!) {
+        Key_Event(key: SDLK_ESCAPE, pressed: true)
+    }
+    
+    @objc func escapeReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_ESCAPE, pressed: false)
+    }
+        
+    @objc func enterPressed(sender: UIButton!) {
+        Key_Event(key: SDLK_RETURN, pressed: true)
+    }
+    
+    @objc func enterReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_RETURN, pressed: false)
+    }
+        
     func Key_Event(key: Int, pressed: Bool) {
         var event = SDL_Event()
         event.type = pressed ? SDL_KEYDOWN.rawValue : SDL_KEYUP.rawValue

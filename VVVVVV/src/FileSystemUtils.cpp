@@ -29,6 +29,9 @@ char saveDir[MAX_PATH];
 char levelDir[MAX_PATH];
 
 void PLATFORM_getOSDirectory(char* output);
+#ifdef IOS
+void PLATFORM_getiOSSaveDirectory(char* output);
+#endif
 void PLATFORM_migrateSaveData(char* output);
 void PLATFORM_copyFile(const char *oldLocation, const char *newLocation);
 
@@ -50,7 +53,13 @@ void FILESYSTEM_init(char *argvZero)
 	printf("Base directory: %s\n", output);
 
 	/* Create save directory */
-	strcpy(saveDir, output);
+#ifdef IOS
+    char documentsDir[MAX_PATH];
+    PLATFORM_getiOSSaveDirectory(documentsDir);
+    strcpy(saveDir, documentsDir);
+#else
+    strcpy(saveDir, output);
+#endif
 	strcat(saveDir, "saves");
 	strcat(saveDir, PHYSFS_getDirSeparator());
 	mkdir(saveDir, 0777);
@@ -168,7 +177,8 @@ void PLATFORM_getOSDirectory(char* output)
 	}
 #elif defined(__APPLE__)
 	strcpy(output, PHYSFS_getUserDir());
-	strcat(output, "Library/Application Support/VVVVVV/");
+    strcat(output, "Library/Application Support/VVVVVV/");
+    
 #elif defined(_WIN32)
 	SHGetFolderPath(NULL, CSIDL_PERSONAL, NULL, SHGFP_TYPE_CURRENT, output);
 	strcat(output, "\\VVVVVV\\");
@@ -176,6 +186,14 @@ void PLATFORM_getOSDirectory(char* output)
 #error See PLATFORM_getOSDirectory
 #endif
 }
+
+#ifdef IOS
+void PLATFORM_getiOSSaveDirectory(char* output)
+{
+    strcpy(output, PHYSFS_getUserDir());
+    strcat(output, "Documents/");
+}
+#endif
 
 void PLATFORM_migrateSaveData(char* output)
 {
