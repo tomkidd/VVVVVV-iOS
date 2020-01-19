@@ -24,9 +24,7 @@ You will need to provide your own copies of the `data.zip` file from an existing
 
 ![folders](https://raw.githubusercontent.com/tomkidd/VVVVVV-iOS/master/folders_vvvvvv.png)
 
-Article is forthcoming.
-
-<!--You can read a lengthy blog article on how I did all this [here](http://schnapple.com/doom-3-for-ios-and-tvos-for-apple-tv/).-->
+You can read a blog article on how I did all this [here](https://schnapple.com/vvvvvv-for-ios-and-tvos-for-apple-tv/).
 
 This port was based on the [source code to VVVVVV](https://github.com/TerryCavanagh/VVVVVV) released as open source by Terry Cavanaugh and uses [SDL for iOS](https://www.libsdl.org/). On-screen joystick code came from [this repo](https://github.com/bradhowes/Joystick) by Brad Howe. I also studied the iOS port of [Hedgewars](https://github.com/hedgewars/hw) for information on how to use UIKit alongside SDL.
 
