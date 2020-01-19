@@ -86,6 +86,8 @@
 		A1203C6F23CD2AEE000886AB /* libSDLmain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7EA23CA8A1F00A408FD /* libSDLmain.a */; };
 		A1203C7023CD2AEE000886AB /* libSDL2_mixer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7F523CA8A3E00A408FD /* libSDL2_mixer.a */; };
 		A1203C7123CD2BAA000886AB /* physfs_platform_apple.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6C6DF23C9489800A408FD /* physfs_platform_apple.m */; };
+		A16424BF23D4155B00012EF9 /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = A16424BD23D4155B00012EF9 /* Network.c */; };
+		A16424C023D4155B00012EF9 /* GOGNetwork.c in Sources */ = {isa = PBXBuildFile; fileRef = A16424BE23D4155B00012EF9 /* GOGNetwork.c */; };
 		A19C840823CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */; };
 		A19C840B23CBD68300794474 /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */; };
 		A19C840C23CBD68300794474 /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C840A23CBD68300794474 /* JoyStickView.swift */; };
@@ -340,6 +342,8 @@
 		A1203C2D23CD29C6000886AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1203C3023CD29C6000886AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1203C3223CD29C6000886AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16424BD23D4155B00012EF9 /* Network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Network.c; sourceTree = "<group>"; };
+		A16424BE23D4155B00012EF9 /* GOGNetwork.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GOGNetwork.c; sourceTree = "<group>"; };
 		A19C83FA23CBD63900794474 /* SDL_uikitviewcontroller+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SDL_uikitviewcontroller+Additions.swift"; sourceTree = "<group>"; };
 		A19C840923CBD68300794474 /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		A19C840A23CBD68300794474 /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
@@ -688,6 +692,8 @@
 		A1D6C6E823C9489800A408FD /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A16424BE23D4155B00012EF9 /* GOGNetwork.c */,
+				A16424BD23D4155B00012EF9 /* Network.c */,
 				A1D6C71423C9489800A408FD /* BinaryBlob.cpp */,
 				A1D6C71223C9489800A408FD /* BinaryBlob.h */,
 				A1D6C72423C9489800A408FD /* BlockV.cpp */,
@@ -1121,6 +1127,7 @@
 				A1D6C75623C9489900A408FD /* editor.cpp in Sources */,
 				A1D6C74C23C9489900A408FD /* preloader.cpp in Sources */,
 				A1D6C75323C9489900A408FD /* Map.cpp in Sources */,
+				A16424BF23D4155B00012EF9 /* Network.c in Sources */,
 				A1D6C75423C9489900A408FD /* BinaryBlob.cpp in Sources */,
 				A19C840C23CBD68300794474 /* JoyStickView.swift in Sources */,
 				A1D6C75E23C9489900A408FD /* UtilityClass.cpp in Sources */,
@@ -1150,6 +1157,7 @@
 				A1D6C75823C9489900A408FD /* TerminalScripts.cpp in Sources */,
 				A1D6C75123C9489900A408FD /* Graphics.cpp in Sources */,
 				A1D6C74E23C9489900A408FD /* FileSystemUtils.cpp in Sources */,
+				A16424C023D4155B00012EF9 /* GOGNetwork.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,19 @@
 #include <SDL.h>
 #include <physfs.h>
 
+#include "tinyxml.h"
+
 #if defined(_WIN32)
 #include <windows.h>
 #include <shlobj.h>
-#define mkdir(a, b) CreateDirectory(a, NULL)
+int mkdir(char* path, int mode)
+{
+	WCHAR utf16_path[MAX_PATH];
+	MultiByteToWideChar(CP_UTF8, 0, path, -1, utf16_path, MAX_PATH);
+	return CreateDirectoryW(utf16_path, NULL);
+}
 #define VNEEDS_MIGRATION (mkdirResult != 0)
-#elif defined(__linux__) || defined(__APPLE__)
+#elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__HAIKU__)
 #include <sys/stat.h>
 #include <limits.h>
 #define VNEEDS_MIGRATION (mkdirResult == 0)
@@ -35,7 +42,7 @@ void PLATFORM_getiOSSaveDirectory(char* output);
 void PLATFORM_migrateSaveData(char* output);
 void PLATFORM_copyFile(const char *oldLocation, const char *newLocation);
 
-void FILESYSTEM_init(char *argvZero)
+int FILESYSTEM_init(char *argvZero)
 {
 	char output[MAX_PATH];
 	int mkdirResult;
@@ -90,6 +97,11 @@ void FILESYSTEM_init(char *argvZero)
 #endif
 	if (!PHYSFS_mount(output, NULL, 1))
 	{
+		puts("Error: data.zip missing!");
+		puts("You do not have data.zip!");
+		puts("Grab it from your purchased copy of the game,");
+		puts("or get it from the free Make and Play Edition.");
+
 		SDL_ShowSimpleMessageBox(
 			SDL_MESSAGEBOX_ERROR,
 			"data.zip missing!",
@@ -98,7 +110,9 @@ void FILESYSTEM_init(char *argvZero)
 			"\nor get it from the free Make and Play Edition.",
 			NULL
 		);
+		return 0;
 	}
+	return 1;
 }
 
 void FILESYSTEM_deinit()
@@ -137,6 +151,35 @@ void FILESYSTEM_freeMemory(unsigned char **mem)
 {
 	free(*mem);
 	*mem = NULL;
+}
+
+bool FILESYSTEM_saveTiXmlDocument(const char *name, TiXmlDocument *doc)
+{
+	/* TiXmlDocument.SaveFile doesn't account for Unicode paths, PHYSFS does */
+	TiXmlPrinter printer;
+	doc->Accept(&printer);
+	PHYSFS_File* handle = PHYSFS_openWrite(name);
+	if (handle == NULL)
+	{
+		return false;
+	}
+	PHYSFS_writeBytes(handle, printer.CStr(), printer.Size());
+	PHYSFS_close(handle);
+	return true;
+}
+
+bool FILESYSTEM_loadTiXmlDocument(const char *name, TiXmlDocument *doc)
+{
+	/* TiXmlDocument.SaveFile doesn't account for Unicode paths, PHYSFS does */
+	unsigned char *mem = NULL;
+	FILESYSTEM_loadFileToMemory(name, &mem, NULL);
+	if (mem == NULL)
+	{
+		return false;
+	}
+	doc->Parse((const char*)mem);
+	FILESYSTEM_freeMemory(&mem);
+	return true;
 }
 
 std::vector<std::string> FILESYSTEM_getLevelDirFileNames()
@@ -201,7 +244,7 @@ void PLATFORM_migrateSaveData(char* output)
 	char oldLocation[MAX_PATH];
 	char newLocation[MAX_PATH];
 	char oldDirectory[MAX_PATH];
-#if defined(__linux__) || defined(__APPLE__)
+#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__HAIKU__)
 	DIR *dir = NULL;
 	struct dirent *de = NULL;
 	DIR *subDir = NULL;
@@ -214,7 +257,7 @@ void PLATFORM_migrateSaveData(char* output)
 		return;
 	}
 	strcpy(oldDirectory, homeDir);
-#if defined(__linux__)
+#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__HAIKU__)
 	strcat(oldDirectory, "/.vvvvvv/");
 #elif defined(__APPLE__)
 	strcat(oldDirectory, "/Documents/VVVVVV/");

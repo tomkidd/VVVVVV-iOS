@@ -36,7 +36,10 @@ scriptclass script;
 
 int main(int argc, char *argv[])
 {
-    FILESYSTEM_init(argv[0]);
+    if(!FILESYSTEM_init(argv[0]))
+    {
+        return 1;
+    }
     SDL_Init(
         SDL_INIT_VIDEO |
         SDL_INIT_AUDIO |
@@ -125,8 +128,8 @@ int main(int argc, char *argv[])
     graphics.Makebfont();
 
 
-    graphics.forgroundBuffer =  SDL_CreateRGBSurface(SDL_SWSURFACE ,320 ,240 ,fmt->BitsPerPixel,fmt->Rmask,fmt->Gmask,fmt->Bmask,fmt->Amask  );
-    SDL_SetSurfaceBlendMode(graphics.forgroundBuffer, SDL_BLENDMODE_NONE);
+    graphics.foregroundBuffer =  SDL_CreateRGBSurface(SDL_SWSURFACE ,320 ,240 ,fmt->BitsPerPixel,fmt->Rmask,fmt->Gmask,fmt->Bmask,fmt->Amask  );
+    SDL_SetSurfaceBlendMode(graphics.foregroundBuffer, SDL_BLENDMODE_NONE);
 
     graphics.screenbuffer = &gameScreen;
 
@@ -160,6 +163,8 @@ int main(int argc, char *argv[])
 
     //Moved screensetting init here from main menu V2.1
     game.loadstats(map, graphics);
+    if (game.skipfakeload)
+        game.gamestate = TITLEMODE;
 		if(game.usingmmmmmm==0) music.usingmmmmmm=false;
 		if(game.usingmmmmmm==1) music.usingmmmmmm=true;
     if (game.slowdown == 0) game.slowdown = 30;
@@ -475,7 +480,7 @@ int main(int argc, char *argv[])
         }
 
         //Mute button
-        if (key.isDown(KEYBOARD_m) && game.mutebutton<=0 && !ed.textentry)
+        if (key.isDown(KEYBOARD_m) && game.mutebutton<=0 && !ed.textentry && ed.scripthelppage != 1)
         {
             game.mutebutton = 8;
             if (game.muted)

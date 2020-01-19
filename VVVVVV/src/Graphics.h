@@ -216,13 +216,14 @@ public:
 
 	bool flipmode;
 	bool setflipmode;
+	bool notextoutline;
 	point tl;
 	//buffer objects. //TODO refactor buffer objects
 	SDL_Surface* backBuffer;
 	Screen* screenbuffer;
 	SDL_Surface* menubuffer;
 	SDL_Surface* towerbuffer;
-	SDL_Surface* forgroundBuffer;
+	SDL_Surface* foregroundBuffer;
 	SDL_Surface* tempBuffer;
 
 	SDL_Rect bfont_rect;

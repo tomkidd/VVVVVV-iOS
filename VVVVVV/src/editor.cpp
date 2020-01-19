@@ -2107,7 +2107,7 @@ void editorclass::save(std::string& _path)
     msg->LinkEndChild( new TiXmlText( scriptString.c_str() ));
     data->LinkEndChild( msg );
 
-    doc.SaveFile((std::string(FILESYSTEM_getUserLevelDirectory()) + _path).c_str() );
+    FILESYSTEM_saveTiXmlDocument(("levels/" + _path).c_str(), &doc);
 }
 
 
@@ -3120,10 +3120,10 @@ void editorrender( KeyPoll& key, Graphics& dwgfx, Game& game, mapclass& map, ent
                 dwgfx.Print( -1, 120, "2: Positive Force", tr, tg, tb, true);
                 break;
             case 3:
-                dwgfx.Print( -1, 120, "3: Potential For Anything", tr, tg, tb, true);
+                dwgfx.Print( -1, 120, "3: Potential for Anything", tr, tg, tb, true);
                 break;
             case 4:
-                dwgfx.Print( -1, 120, "4: Passion For Exploring", tr, tg, tb, true);
+                dwgfx.Print( -1, 120, "4: Passion for Exploring", tr, tg, tb, true);
                 break;
             case 6:
                 dwgfx.Print( -1, 120, "5: Presenting VVVVVV", tr, tg, tb, true);
@@ -3144,7 +3144,7 @@ void editorrender( KeyPoll& key, Graphics& dwgfx, Game& game, mapclass& map, ent
                 dwgfx.Print( -1, 120, "10: Paced Energy", tr, tg, tb, true);
                 break;
             case 14:
-                dwgfx.Print( -1, 120, "11: Piercing The Sky", tr, tg, tb, true);
+                dwgfx.Print( -1, 120, "11: Piercing the Sky", tr, tg, tb, true);
                 break;
             default:
                 dwgfx.Print( -1, 120, "?: something else", tr, tg, tb, true);
@@ -3642,6 +3642,13 @@ void editorinput( KeyPoll& key, Graphics& dwgfx, Game& game, mapclass& map, enti
     game.my = (float) key.my;
     ed.tilex=(game.mx - (game.mx%8))/8;
     ed.tiley=(game.my - (game.my%8))/8;
+    if (game.stretchMode == 1) {
+        // In this mode specifically, we have to fix the mouse coordinates
+        int winwidth, winheight;
+        dwgfx.screenbuffer->GetWindowSize(&winwidth, &winheight);
+        ed.tilex = ed.tilex * 320 / winwidth;
+        ed.tiley = ed.tiley * 240 / winheight;
+    }
 
     game.press_left = false;
     game.press_right = false;

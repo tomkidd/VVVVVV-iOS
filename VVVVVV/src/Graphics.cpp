@@ -31,6 +31,7 @@ Graphics::Graphics()
 
     showcutscenebars = false;
     cutscenebarspos = 0;
+    notextoutline = false;
 
     flipmode = false;
     setflipmode = false;
@@ -88,23 +89,39 @@ Graphics::Graphics()
     resumegamemode = false;
 
     //Textboxes!
-    for (int i = 0; i < 30; i++)
-    {
-        textboxclass t;
-        textbox.push_back(t);
-    }
+    textbox.resize(30);
     ntextbox = 0;
 
     //Fading stuff
-    for (int i = 0; i < 15; i++)
-    {
-        fadebars.push_back(0);
-    }
+    fadebars.resize(15);
+
     fadeamount = 0;
     fademode = 0;
 
-
-
+    // initialize everything else to zero
+    backBuffer = NULL;
+    backboxrect = SDL_Rect();
+    bcol = 0;
+    bcol2 = 0;
+    ct = colourTransform();
+    foot_rect = SDL_Rect();
+    foregrounddrawn = false;
+    foregroundBuffer = NULL;
+    backgrounddrawn = false;
+    images_rect = SDL_Rect();
+    j = 0;
+    k = 0;
+    m = 0;
+    linedelay = 0;
+    menubuffer = NULL;
+    screenbuffer = NULL;
+    tempBuffer = NULL;
+    tl = point();
+    towerbuffer = NULL;
+    trinketr = 0;
+    trinketg = 0;
+    trinketb = 0;
+    warprect = SDL_Rect();
 }
 
 Graphics::~Graphics()
@@ -364,19 +381,22 @@ void Graphics::bprint( int x, int y, std::string t, int r, int g, int b, bool ce
 {
 
     //printmask(x, y, t, cen);
-    //Print(x, y - 1, t, 0, 0, 0, cen);
-    //if (cen)
-    //{
-    //	//TODO find different
-    //	PrintOff(-1, y, t, 0, 0, 0, cen);
-    //	PrintOff(1, y, t, 0, 0, 0, cen);
-    //}
-    //else
-    //{
-    //	Print(x  -1, y, t, 0, 0, 0, cen);
-    //	Print(x , y, t, 0, 0, 0, cen);
-    //}
-    //Print(x, y+1, t, 0, 0, 0, cen);
+    if (!notextoutline)
+    {
+        Print(x, y - 1, t, 0, 0, 0, cen);
+        if (cen)
+        {
+            //TODO find different
+            PrintOff(-1, y, t, 0, 0, 0, cen);
+            PrintOff(1, y, t, 0, 0, 0, cen);
+        }
+        else
+        {
+            Print(x  -1, y, t, 0, 0, 0, cen);
+            Print(x  +1, y, t, 0, 0, 0, cen);
+        }
+        Print(x, y+1, t, 0, 0, 0, cen);
+    }
 
     Print(x, y, t, r, g, b, cen);
 }
@@ -2322,7 +2342,7 @@ void Graphics::drawmap( mapclass& map )
     ///TODO forground once;
     if (!foregrounddrawn)
     {
-        FillRect(forgroundBuffer, 0xDEADBEEF);
+        FillRect(foregroundBuffer, 0xDEADBEEF);
         if(map.tileset==0)
         {
             for (j = 0; j < 29+map.extrarow; j++)
@@ -2355,8 +2375,8 @@ void Graphics::drawmap( mapclass& map )
         }
         foregrounddrawn = true;
     }
-    OverlaySurfaceKeyed(forgroundBuffer, backBuffer, 0xDEADBEEF);
-    //SDL_BlitSurface(forgroundBuffer, NULL, backBuffer, NULL);
+    OverlaySurfaceKeyed(foregroundBuffer, backBuffer, 0xDEADBEEF);
+    //SDL_BlitSurface(foregroundBuffer, NULL, backBuffer, NULL);
 
 }
 
@@ -2378,7 +2398,7 @@ void Graphics::drawfinalmap(mapclass & map)
 	}
 
 	if (!foregrounddrawn) {
-		FillRect(forgroundBuffer, 0xDEADBEEF);
+		FillRect(foregroundBuffer, 0xDEADBEEF);
 		if(map.tileset==0){
 			for (int j = 0; j < 29+map.extrarow; j++) {
 				for (int i = 0; i < 40; i++) {
@@ -2397,7 +2417,7 @@ void Graphics::drawfinalmap(mapclass & map)
 		foregrounddrawn=true;
 	}
 
-	OverlaySurfaceKeyed(forgroundBuffer, backBuffer, 0xDEADBEEF);
+	OverlaySurfaceKeyed(foregroundBuffer, backBuffer, 0xDEADBEEF);
 }
 
 void Graphics::drawtowermap( mapclass& map )
@@ -3056,8 +3076,12 @@ void Graphics::bigrprint(int x, int y, std::string& t, int r, int g, int b, bool
 
 	x -= (len(t));
 
-	if (r < -1) r = -1; if (g < 0) g = 0; if (b < 0) b = 0;
-	if (r > 255) r = 255; if (g > 255) g = 255; if (b > 255) b = 255;
+	if (r < -1) r = -1;
+	if (g < 0) g = 0;
+	if (b < 0) b = 0;
+	if (r > 255) r = 255;
+	if (g > 255) g = 255;
+	if (b > 255) b = 255;
 	ct.colour = getRGB(r, g, b);
 
 	if (cen)
@@ -3156,7 +3180,7 @@ void Graphics::drawforetile(int x, int y, int t)
 	//frontbuffer.copyPixels(tiles[t], tiles_rect, tpoint);
 	SDL_Rect rect;
 	setRect(rect, x,y,tiles_rect.w, tiles_rect.h);
-	BlitSurfaceStandard(tiles[t],NULL, forgroundBuffer, &rect  );
+	BlitSurfaceStandard(tiles[t],NULL, foregroundBuffer, &rect  );
 }
 
 void Graphics::drawforetile2(int x, int y, int t)
@@ -3164,14 +3188,14 @@ void Graphics::drawforetile2(int x, int y, int t)
 	//frontbuffer.copyPixels(tiles2[t], tiles_rect, tpoint);
 	SDL_Rect rect;
 	setRect(rect, x,y,tiles_rect.w, tiles_rect.h);
-	BlitSurfaceStandard(tiles2[t],NULL, forgroundBuffer, &rect  );
+	BlitSurfaceStandard(tiles2[t],NULL, foregroundBuffer, &rect  );
 }
 
 void Graphics::drawforetile3(int x, int y, int t, int off)
 {
 	SDL_Rect rect;
 	setRect(rect, x,y,tiles_rect.w, tiles_rect.h);
-	BlitSurfaceStandard(tiles3[t+(off*30)],NULL, forgroundBuffer, &rect  );
+	BlitSurfaceStandard(tiles3[t+(off*30)],NULL, foregroundBuffer, &rect  );
 	//frontbuffer.copyPixels(tiles3[t+(off*30)], tiles_rect, tpoint);
 }
 
