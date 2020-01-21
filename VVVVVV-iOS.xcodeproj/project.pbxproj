@@ -443,7 +443,7 @@
 		A1D6C76A23C9491000A408FD /* libphysfs-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libphysfs-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6C78023C9494100A408FD /* liblodepng-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblodepng-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6C78D23C9496200A408FD /* libtinyxml-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtinyxml-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1D6C7D023C94E4500A408FD /* data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = data.zip; path = "../../../Downloads/VVVVVV-MP/data.zip"; sourceTree = "<group>"; };
+		A1D6C7D023C94E4500A408FD /* data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = data.zip; sourceTree = "<group>"; };
 		A1D6C7D323CA8A1F00A408FD /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "SDL2/Xcode-iOS/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		A1D6C7EB23CA8A3E00A408FD /* SDL_mixer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_mixer.xcodeproj; path = "SDL2_mixer/Xcode-iOS/SDL_mixer.xcodeproj"; sourceTree = "<group>"; };
 		A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1347,9 +1347,9 @@
 					IOS,
 				);
 				HEADER_SEARCH_PATHS = (
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/VVVVVV/physfs",
+					"${SRCROOT}/SDL2/include",
+					"${SRCROOT}/SDL2_mixer",
+					"${SRCROOT}/VVVVVV/physfs",
 					"$(PROJECT_DIR)/SDL2/**",
 				);
 				INFOPLIST_FILE = Info.plist;
@@ -1382,9 +1382,9 @@
 					IOS,
 				);
 				HEADER_SEARCH_PATHS = (
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/VVVVVV/physfs",
+					"${SRCROOT}/SDL2/include",
+					"${SRCROOT}/SDL2_mixer",
+					"${SRCROOT}/VVVVVV/physfs",
 					"$(PROJECT_DIR)/SDL2/**",
 				);
 				INFOPLIST_FILE = Info.plist;
@@ -1645,9 +1645,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/VVVVVV/physfs",
+					"${SRCROOT}/SDL2/include",
+					"${SRCROOT}/SDL2_mixer",
+					"${SRCROOT}/VVVVVV/physfs",
 					"$(PROJECT_DIR)/SDL2/**",
 				);
 				INFOPLIST_FILE = "VVVVVV-tvOS/Info.plist";
@@ -1691,9 +1691,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2/include",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/SDL2_mixer",
-					"/Users/tomkidd/Documents/GitHub/VVVVVV-iOS/VVVVVV/physfs",
+					"${SRCROOT}/SDL2/include",
+					"${SRCROOT}/SDL2_mixer",
+					"${SRCROOT}/VVVVVV/physfs",
 					"$(PROJECT_DIR)/SDL2/**",
 				);
 				INFOPLIST_FILE = "VVVVVV-tvOS/Info.plist";
