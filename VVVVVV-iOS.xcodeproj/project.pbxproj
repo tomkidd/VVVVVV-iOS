@@ -146,6 +146,8 @@
 		A1D6C80523CA8BD400A408FD /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7E023CA8A1F00A408FD /* libSDL2.a */; };
 		A1D6C80623CA8BD400A408FD /* libSDLmain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7E823CA8A1F00A408FD /* libSDLmain.a */; };
 		A1D6C80723CA8BD400A408FD /* libSDL2_mixer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6C7F323CA8A3E00A408FD /* libSDL2_mixer.a */; };
+		A1E9A14323E947B300236A83 /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = A16424BD23D4155B00012EF9 /* Network.c */; };
+		A1E9A15123E947C100236A83 /* GOGNetwork.c in Sources */ = {isa = PBXBuildFile; fileRef = A16424BE23D4155B00012EF9 /* GOGNetwork.c */; };
 		A1F93F5F23CBDEDF00ABDE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */; };
 		A1F93F6423CC192B00ABDE85 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F93F6323CC192B00ABDE85 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -443,7 +445,7 @@
 		A1D6C76A23C9491000A408FD /* libphysfs-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libphysfs-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6C78023C9494100A408FD /* liblodepng-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblodepng-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D6C78D23C9496200A408FD /* libtinyxml-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtinyxml-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1D6C7D023C94E4500A408FD /* data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = data.zip; sourceTree = "<group>"; };
+		A1D6C7D023C94E4500A408FD /* data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = data.zip; path = "../../../Downloads/VVVVVV-MP/data.zip"; sourceTree = "<group>"; };
 		A1D6C7D323CA8A1F00A408FD /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "SDL2/Xcode-iOS/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		A1D6C7EB23CA8A3E00A408FD /* SDL_mixer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_mixer.xcodeproj; path = "SDL2_mixer/Xcode-iOS/SDL_mixer.xcodeproj"; sourceTree = "<group>"; };
 		A1F93F5E23CBDEDF00ABDE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1202,6 +1204,7 @@
 			files = (
 				A1203C4423CD2A66000886AB /* Labclass.cpp in Sources */,
 				A1203C6323CD2AD5000886AB /* sys_ios.mm in Sources */,
+				A1E9A15123E947C100236A83 /* GOGNetwork.c in Sources */,
 				A1203C3E23CD2A66000886AB /* Game.cpp in Sources */,
 				A1203C5123CD2A66000886AB /* Textbox.cpp in Sources */,
 				A1203C5323CD2A66000886AB /* Tower.cpp in Sources */,
@@ -1216,6 +1219,7 @@
 				A1203C4F23CD2A66000886AB /* Spacestation2.cpp in Sources */,
 				A1203C3823CD2A66000886AB /* BlockV.cpp in Sources */,
 				A1203C4C23CD2A66000886AB /* Script.cpp in Sources */,
+				A1E9A14323E947B300236A83 /* Network.c in Sources */,
 				A1203C5523CD2A66000886AB /* WarpClass.cpp in Sources */,
 				A1203C5023CD2A66000886AB /* TerminalScripts.cpp in Sources */,
 				A1203C3923CD2A66000886AB /* editor.cpp in Sources */,
